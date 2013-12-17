@@ -7,7 +7,9 @@ use Composer\Installer\LibraryInstaller;
 use Composer\Repository\InstalledRepositoryInterface;
 use Composer\Json\JsonFile;
 use Composer\Repository\ArrayRepository;
-
+use Composer\Composer;
+use Composer\IO\IOInterface;
+use Composer\Util\Filesystem;
 
 use Ladybug\Dumper;
 
