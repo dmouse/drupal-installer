@@ -15,7 +15,8 @@ class TemplateInstaller extends LibraryInstaller {
 
   private $drupal_composer = [];
 
-  public function __construct(){
+  public function __construct(IOInterface $io, Composer $composer, $type = 'library', Filesystem $filesystem = null){
+    parent::__construct($io, $composer, $type, $filesystem);
 
     $json = new JsonFile('../drupal8.dev/composer.lock');
     $composer_lock = $json->read();
