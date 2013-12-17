@@ -11,15 +11,12 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Util\Filesystem;
 
-use Ladybug\Dumper;
-
 class TemplateInstaller extends LibraryInstaller {
 
   private $drupal_composer = [];
 
   public function __construct(IOInterface $io, Composer $composer, $type = 'library', Filesystem $filesystem = null){
     parent::__construct($io, $composer, $type, $filesystem);
-
     $json = new JsonFile('../drupal8.dev/composer.lock');
     $composer_lock = $json->read();
     foreach ($composer_lock['packages'] as $package) {
@@ -28,10 +25,6 @@ class TemplateInstaller extends LibraryInstaller {
   }
 
   public function isInstalled(InstalledRepositoryInterface $repo, PackageInterface $package) {
-
-    $ladybug = new Dumper();
-    //$ladybug->dump($repo);
-
     return in_array($package->getName(), $this->drupal_composer);
   }
 

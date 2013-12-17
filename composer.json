@@ -16,7 +16,6 @@
       "class": "HechoEnDrupal\\Composer\\TemplateInstallerPlugin"
     },
     "require": {
-      "composer-plugin-api": "1.0.0",
-      "raulfraile/ladybug": "v1.0.8"
+      "composer-plugin-api": "1.0.0"
     }
 }
