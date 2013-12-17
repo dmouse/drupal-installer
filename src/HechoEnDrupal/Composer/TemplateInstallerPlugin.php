@@ -4,7 +4,7 @@ namespace HechoEnDrupal\Composer;
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 
-class TemplateInstaller extends LibraryInstaller {
+class TemplateInstallerPlugin extends LibraryInstaller {
 
   /**
    * {@inheritDoc}
