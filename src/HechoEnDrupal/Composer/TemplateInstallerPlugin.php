@@ -5,6 +5,16 @@ use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 
 class TemplateInstallerPlugin extends LibraryInstaller {
+  /**
+   * Initializes base installer.
+   *
+   * @param PackageInterface $package
+   * @param Composer         $composer
+   */
+  public function __construct(PackageInterface $package = null, Composer $composer = null) {
+    $this->composer = $composer;
+    $this->package = $package;
+  }
 
   /**
    * {@inheritDoc}
