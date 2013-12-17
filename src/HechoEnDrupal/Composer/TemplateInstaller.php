@@ -16,7 +16,9 @@ class TemplateInstaller extends LibraryInstaller {
   private $drupal_composer = [];
 
   public function __construct(){
-    $composer_lock = new JsonFile('../drupal8.dev/composer.lock');
+
+    $json = new JsonFile('../drupal8.dev/composer.lock');
+    $composer_lock = $json->read();
     foreach ($composer_lock['packages'] as $package) {
       array_push($this->drupal_composer, $package['name']);
     }
@@ -30,9 +32,6 @@ class TemplateInstaller extends LibraryInstaller {
     //$ladybug->dump($drupal_composer);
 
     $ladybug->dump($this->drupal_composer);
-
-
-
     return false;
   }
 
