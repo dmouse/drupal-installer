@@ -18,8 +18,11 @@ class TemplateInstaller extends LibraryInstaller {
 
     $ladybug = new Dumper();
     //$ladybug->dump($repo);
-    $ladybug->dump($package->getPrettyName());
-    $ladybug->dump($drupal_composer);
+    //$ladybug->dump($package->getPrettyName());
+    //$ladybug->dump($drupal_composer);
+
+    $ladybug->dump($drupal_composer->read());
+
 
 
     return false;
