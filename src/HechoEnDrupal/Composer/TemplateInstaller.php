@@ -27,7 +27,6 @@ class TemplateInstaller extends LibraryInstaller {
   public function isInstalled(InstalledRepositoryInterface $repo, PackageInterface $package) {
 
     if (in_array($package->getName(), $this->drupal_composer)){
-      $this->uninstall($repo,$package);
       return true;
     }
     else {
@@ -35,6 +34,11 @@ class TemplateInstaller extends LibraryInstaller {
     }
   }
 
+  public function install(InstalledRepositoryInterface $repo, PackageInterface $package){
+    if (in_array($package->getName(), $this->drupal_composer)){
+      $this->uninstall($repo,$package);
+    }
+  }
 
 
 }
