@@ -9,7 +9,12 @@ use Composer\Repository\InstalledRepositoryInterface;
 class TemplateInstaller extends LibraryInstaller {
 
   public function isInstalled(InstalledRepositoryInterface $repo, PackageInterface $package) {
-    print_r($package);
-    print_r($repo);
+    print_r($package->getName());
+    //print_r($repo);
   }
+
+  public function getInstallPath(PackageInterface $package){
+
+  }
+
 }
