@@ -2,6 +2,7 @@
     "name": "hechoendrupal/drupal-installer",
     "description": "Drupal composer installer for composer_manager module",
     "license": "MIT",
+    "type": "composer-plugin",
     "authors": [
         {
             "name": "David Flores",
