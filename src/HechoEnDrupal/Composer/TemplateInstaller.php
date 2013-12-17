@@ -25,7 +25,13 @@ class TemplateInstaller extends LibraryInstaller {
   }
 
   public function isInstalled(InstalledRepositoryInterface $repo, PackageInterface $package) {
-    return in_array($package->getName(), $this->drupal_composer);
+
+    if (in_array($package->getName(), $this->drupal_composer))
+      print_r "oko ";
+
+    return true;
   }
+
+
 
 }
