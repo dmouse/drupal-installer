@@ -26,6 +26,7 @@ class TemplateInstaller extends LibraryInstaller {
    * {@inheritDoc}
    */
   public function supports($packageType) {
+    print_r($packageType);
     return 'phpdocumentor-template' === $packageType;
   }
 }
