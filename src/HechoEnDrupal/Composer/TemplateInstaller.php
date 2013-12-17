@@ -13,12 +13,8 @@ class TemplateInstaller extends LibraryInstaller {
   public function isInstalled(InstalledRepositoryInterface $repo, PackageInterface $package) {
 
     $ladybug = new Dumper();
-    $ladybug->dump($package->getName());
+    $ladybug->dump($package);
     return false;
-  }
-
-  public function getInstallPath(PackageInterface $package){
-
   }
 
 }
