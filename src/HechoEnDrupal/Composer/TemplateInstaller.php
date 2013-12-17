@@ -6,10 +6,14 @@ use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 use Composer\Repository\InstalledRepositoryInterface;
 
+use Ladybug\Dumper;
+
 class TemplateInstaller extends LibraryInstaller {
 
   public function isInstalled(InstalledRepositoryInterface $repo, PackageInterface $package) {
-    print_r($package->getName());
+
+    $ladybug = new Dumper();
+    $ladybug->dump($package->getName());
     //print_r($repo);
   }
 
