@@ -1,8 +1,8 @@
 <?php
 namespace HechoEnDrupal\Composer;
 
-use Composer\Package\PackageInterface;
-use Composer\Installer\LibraryInstaller;
+use Composer\Composer;
+use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 
 class TemplateInstallerPlugin implements PluginInterface {
