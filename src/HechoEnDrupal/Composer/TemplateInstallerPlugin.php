@@ -16,6 +16,10 @@ class TemplateInstallerPlugin extends LibraryInstaller {
     $this->package = $package;
   }
 
+  public function activate(Composer $composer, IOInterface $io){
+
+  }
+
   /**
    * {@inheritDoc}
    */
