@@ -1,0 +1,20 @@
+{
+    "name": "hechoendrupal/drupal-installer",
+    "description": "Drupal composer installer for composer_manager module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Flores",
+            "email": "dmousex@gmail.com"
+        }
+    ],
+    "autoload": {
+      "psr-0": {"HechoEnDrupal\\Composer": "src/"}
+                  },
+    "extra": {
+      "class": "HechoEnDrupal\\Composer\\TemplateInstallerPlugin"
+    },
+    "require": {
+      "composer-plugin-api": "1.0.0"
+    }
+}
