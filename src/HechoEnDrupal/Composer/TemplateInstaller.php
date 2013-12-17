@@ -14,7 +14,7 @@ class TemplateInstaller extends LibraryInstaller {
 
     $ladybug = new Dumper();
 
-    $ladybug->dump($repo);
+    //$ladybug->dump($repo);
     $ladybug->dump($package->getTargetDir());
 
     return false;
